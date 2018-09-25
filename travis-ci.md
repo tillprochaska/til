@@ -25,7 +25,7 @@ Travis erweitert die »Matrix« der möglichen Umgebungsfaktoren – in diesem F
 
 Offensichtlich ist die Lösung in dieser simplen Form für für Monorepos geeignet, die aus Paketen bestehen, die größtenteil die gleichen Sprach-, Build- und Testvoraussetzungen haben.
 
-## Einfaches Deployment-Setup
+## Einfaches Deployment-Setup mit `rsync`
 Travis unterstützt das Deployment zu einer Reihe von Cloud-Providern. Um allerdings einfach nur das Ergebnis des Build-Prozesses zu deployen, reicht `rsync` aus. `rsync` überträgt Dateien per SSH auf einen Zielserver, wobei nur Dateien übertragen werden, die neu hinzugekommen sind oder verändert wurden. Die folgende Konfiguration setzt folgende Umgebungsvariablen voraus, die am besten über die Repository-Einstellung im Travis-Webinterface hinzugefügt und ggf. verschlüsselt werden sollten.
 
 * `TARGET_PUB_KEY`: Public Key des Zielservers, base64-kodiert
