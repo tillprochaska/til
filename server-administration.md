@@ -9,6 +9,7 @@ Notizen zum Aufsetzen und Betreiben eines Webservers (speziell für AWS EC2-Inst
 * [Logs](#logs)
 * [fail2ban](#fail2ban)
 * [CDN](#cdn)
+* [Logfiles analysieren](#logfiles-analysieren)
 
 ## Apache und PHP installieren
 Dank Package-Manager ist Apache inkl. PHP unter Amazon Linux mit ein paar Befehlen installiert: Bei einer frischen AMI-Instanz am besten zuerst alle installierten Pakete aktualisieren:
@@ -322,3 +323,10 @@ Dies kann unterbunden werden, indem die Konfigurationsoption `session.cache_limi
 session_cache_limiter('public');
 session_cache_expire(180); // Gültigkeitsdauer des Caches in Minuten, Standard: 180
 ```
+
+## Logfiles analysieren
+[GoAccess](https://goaccess.io/) ist ein praktisches Tool, das Logfiles in verschiedenen Formaten, z. B. von Apache Webservern oder Amazons CloudFront CDN analysieren und hübsch aufbereiten kann. Nachdem GoAccess z. B. mithilfe von Homebrew installiert wurde, kann beispielsweise mit folgendem Befehle eine Auswertung eines Logfiles im *Combined Logfile Format* (CLF) `access.log` als HTML-Datei `access_report.html` erstellt werden:
+
+```
+goaccess access.log -o access_report.html --log-format=COMBINED
+``
