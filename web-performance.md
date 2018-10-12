@@ -14,3 +14,5 @@ window.addEventListener('touchstart', handler, { passive: true });
 ⚠️ Browser, die passive Event-Listener nicht unterstützen, erwarten als dritten Parameter einen Boolean-Wert. Da jedes Objekt in JavaScript als wahrer Wert interpretiert wird, sollte zunächst geprüft werden, ob der Browser ein Objekt mit Optionen für den Event-Listener wie oben unterstützt.
 
 ⚠️ Da Scroll-Events anders als Mausrad- und Touch-Events nicht abgebrochen werden können, also standardmäßig passiv sind, müssen diese nicht explizit als passiv markiert werden.
+
+* [EventListenerOptions Spec Explainer](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md)
