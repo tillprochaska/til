@@ -37,7 +37,7 @@ Grundsätzlich können auch JavaScript-Module ohne Typdeklarationen importiert w
 
 ```js
 import { Module } from 'module';
-const MyModule: any = Store;
+const MyModule: any = Module;
 ```
 
 Auf `MyModule` kann jetzt beliebig zugegriffen werden, ohne das der Compiler Fehler wirft.
