@@ -57,3 +57,42 @@ get() {
 ```
 
 Quelle: [sveltejs/sapper#230](https://github.com/sveltejs/sapper/issues/230#issuecomment-379493101)
+
+## Globale Styles
+Häufig verfügen auch komplexe Anwendungen über einen Grundstock an globalen Styles, die normal kaskadieren sollen. Handelt es sich dabei um »plain« CSS ohne Build-Step (z. B. einfache Resets), kann dieser über einen `style`- oder `link`-Tag einfach in die `template.html` eingefügt werden.
+
+Ein wenig komplizierter wird es allerdings, wenn Prä- oder Postprozessoren zum Einsatz kommen sollen. Die einfachste Variante: Die globalen Styles können separat behandelt, das Build-Artefakt kann anschließend auf die gleiche Arte und Weise eingebunden werden.
+
+```html
+<style>
+    @import 'global.css';
+</style>
+```
+
+Zusammen mit [`postcss-import`](https://github.com/postcss/postcss-import) könnten so globale Styles eingebunden werden – wären nicht alle Styles in Svelte per Default gescoped. Um das zu umgehen muss jeder Selektor mittel `:global()` davon ausgenommen werden. Mithilfe von [`postcss-import-global`](https://github.com/tillprochaska/postcss-import-global) kann das auch automatisiert werden.
+
+
+```html
+<!-- _layout.html -->
+<style>
+    @import-global 'global.css';
+</style>
+```
+
+```css
+// global.css
+body {
+    color: green;
+}
+```
+
+`postcss-import-global` transformiert `global.css` wie folgt, wodurch es von Svelte/Sapper verschont bleibt.
+
+```css
+:global(body) {
+    color: green;
+}
+```
+
+* Es gibt einen RFC ([sveltejs/svelte#901](https://github.com/sveltejs/svelte/issues/901)) zum Vorschlag, `global`-Attribut für `style`-Tags einzuführen, das den gesamten Inhalt des Tags als global markiert und damit vom Scoping ausnimmt.
+* Webpack und Rollup erkennen Änderungen in importierten Dateien nicht. Der Build muss nach erfolgten Änderungen manuell neu angestoßen werden. Sobald Svelte das Deklarieren von Abhängigkeiten durch Präprozessoren unterstützt ([sveltejs/svelte#1720](https://github.com/sveltejs/svelte/issues/1720)), könnte sich das ändern.
