@@ -80,7 +80,7 @@ Zusammen mit [`postcss-import`](https://github.com/postcss/postcss-import) könn
 ```
 
 ```css
-// global.css
+/* global.css */
 body {
     color: green;
 }
