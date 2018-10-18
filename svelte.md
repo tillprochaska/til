@@ -58,7 +58,7 @@ get() {
 
 Quelle: [sveltejs/sapper#230](https://github.com/sveltejs/sapper/issues/230#issuecomment-379493101)
 
-## Globale Styles
+### Globale Styles
 Häufig verfügen auch komplexe Anwendungen über einen Grundstock an globalen Styles, die normal kaskadieren sollen. Handelt es sich dabei um »plain« CSS ohne Build-Step (z. B. einfache Resets), kann dieser über einen `style`- oder `link`-Tag einfach in die `template.html` eingefügt werden.
 
 Ein wenig komplizierter wird es allerdings, wenn Prä- oder Postprozessoren zum Einsatz kommen sollen. Die einfachste Variante: Die globalen Styles können separat behandelt, das Build-Artefakt kann anschließend auf die gleiche Arte und Weise eingebunden werden.
