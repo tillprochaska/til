@@ -26,3 +26,13 @@ Grundsätzlich sind zwei Scenarien zu beachten:
        }, 1000);
    };
    ```
+
+## Bundle-/Modulformate
+
+### ES Module
+
+### CommonJS
+
+### IIFE
+
+### UMD
