@@ -12,7 +12,15 @@ x_1 := x_2 + c
 x_1 := x_2 - c
 ```
 
+#### Aneinanderreihungen
+Die obigen Operationen sind bereits sogenante atomare WHILE-Programme. Mehrere WHILE-Programme lassen sich aneinanderreihen:
+
+```
+P_1; P_2
+```
+
 #### LOOP-Anweisungen
+Neben der Aneinanderreihung mehrerer Programme lassen sich zusammengesetzte Programme auch mit Schleifen bilden:
 ```
 LOOP x_1 DO P_1 END
 ```
@@ -20,11 +28,4 @@ LOOP x_1 DO P_1 END
 #### WHILE-Anweisungen
 ```
 WHILE x_1 != 0 DO P_1 END
-```
-
-#### Aneinanderreihungen
-Die obigen Operationen sind bereits sogenante atomare WHILE-Programme. Mehrere WHILE-Programme lassen sich aneinanderreihen:
-
-```
-P_1; P_2
 ```
