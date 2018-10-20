@@ -329,4 +329,4 @@ session_cache_expire(180); // Gültigkeitsdauer des Caches in Minuten, Standard:
 
 ```
 goaccess access.log -o access_report.html --log-format=COMBINED
-``
+```
