@@ -1,5 +1,10 @@
 # Vim
 
+## Befehle
+
+### Beenden
+`:w` speichert das Dokument. `:q` beendet `vim`. `:wq` (oder das Kürzel `:x`) speichern das Dokument und beenden `vim` anschließend.
+
 ## Modi
 
 ### Normal Mode
