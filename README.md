@@ -2,6 +2,7 @@
 
 * [Apple](apple.md)
 * [JavaScript](javascript.md)
+* [Security](security.md)
 * [Server Administration](server-administration.md)
 * [Svelte](svelte.md)
 * [Travis CI](travis-ci.md)
