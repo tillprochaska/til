@@ -1,4 +1,4 @@
-# Svelte.js
+# Slate.js
 
 ## Blöcke ohne Kinder / nicht editierbare Blöcke
 
