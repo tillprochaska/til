@@ -7,4 +7,5 @@ In some mobile browsers, especially mobile Safari, `100vh` will be the height of
 Applying `height: 100%` to the `html` element will return the actual height of the visual viewport in those cases.
 
 * [WebKit Bug-Report und Diskussion](https://bugs.webkit.org/show_bug.cgi?id=141832)
+* [Verhalten in Chrome unter Android](https://developers.google.com/web/updates/2016/12/url-bar-resizing)
 * [Vorschlag `env(viewport-nav-resize)` Umgebungs-Variable](https://github.com/w3c/csswg-drafts/issues/2630)
