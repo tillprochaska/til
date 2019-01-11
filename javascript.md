@@ -36,3 +36,6 @@ Grundsätzlich sind zwei Scenarien zu beachten:
 ### IIFE
 
 ### UMD
+
+## Memory Leaks debuggen
+* https://developers.google.com/web/tools/chrome-devtools/console/utilities?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3#geteventlistenersobject
