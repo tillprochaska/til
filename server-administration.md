@@ -10,6 +10,7 @@ Notizen zum Aufsetzen und Betreiben eines Webservers (speziell für AWS EC2-Inst
 * [fail2ban](#fail2ban)
 * [CDN](#cdn)
 * [Logfiles analysieren](#logfiles-analysieren)
+* [Server-/X-Powered-By-Header entfernen](#server-x-powered-by-header-entfernen)
 
 ## Apache und PHP installieren
 Dank Package-Manager ist Apache inkl. PHP unter Amazon Linux mit ein paar Befehlen installiert: Bei einer frischen AMI-Instanz am besten zuerst alle installierten Pakete aktualisieren:
@@ -329,4 +330,16 @@ session_cache_expire(180); // Gültigkeitsdauer des Caches in Minuten, Standard:
 
 ```
 goaccess access.log -o access_report.html --log-format=COMBINED
+```
+
+## Server-/X-Powered-By-Header entfernen
+Standardmäßig exposen Apache und PHP über den `Server` sowie den `X-Powered-By`-Header detaillierte Informationen über die Apache-, PHP- und Betriebssystem-Version. Diese Informationen werden teilweise auch auf automatisch von Apache generierten Fehlerseiten angezeigt. Durch Anpassen der `httpd.conf` kann dies deaktiviert werden:
+
+```apache
+# Remove detailed server, PHP and OS information from response
+# headers and error pages
+ServerTokens Prod
+ServerSignature Off
+Header always unset "X-Powered-By"
+Header unset "X-Powered-By"
 ```
