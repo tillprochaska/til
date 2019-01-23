@@ -343,3 +343,9 @@ ServerSignature Off
 Header always unset "X-Powered-By"
 Header unset "X-Powered-By"
 ```
+
+Danach muss Apache nur noch neugestartet werden – schon wird im Server-Header nur noch `Apache` angezeigt, nicht aber die genaue Version:
+
+```
+sudo service httpd graceful
+```
