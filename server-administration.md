@@ -4,7 +4,7 @@ Notizen zum Aufsetzen und Betreiben eines Webservers (speziell für AWS EC2-Inst
 ## Inhalt
 
 * [Apache und PHP installieren](#apache-und-php-installieren)
-* [PHP Version aktualisieren oder ändern](#php-version-aktualisieren-oder-aendern)
+* [PHP Version aktualisieren oder ändern](#php-version-aktualisieren-oder-ändern)
 * [SSL-Zertifikat von Let’s Encrypt](#ssl-zertifikat-von-lets-encrypt)
 * [Neuen Nutzer erstellen](#neuen-nutzer-erstellen)
 * [Logs](#logs)
