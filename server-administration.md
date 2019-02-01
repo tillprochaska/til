@@ -4,6 +4,7 @@ Notizen zum Aufsetzen und Betreiben eines Webservers (speziell für AWS EC2-Inst
 ## Inhalt
 
 * [Apache und PHP installieren](#apache-und-php-installieren)
+* [PHP Version aktualisieren oder ändern](#php-version-aktualisieren-oder-aendern)
 * [SSL-Zertifikat von Let’s Encrypt](#ssl-zertifikat-von-lets-encrypt)
 * [Neuen Nutzer erstellen](#neuen-nutzer-erstellen)
 * [Logs](#logs)
@@ -59,10 +60,30 @@ Sofern das Modul `mod_rewrite` unter Apache genutzt werden soll, muss außerdem 
 </Directory>
 ```
 
-Anschlißend Apache neu starten:
+Anschließend Apache neu starten:
 
 ```
 $ sudo service httpd restart
+```
+
+## PHP-Version aktualisieren oder ändern
+Zunächst die gewünschte PHP-Version (im Beispiel 7.2) sowie passende Extensions mittels `yum` installieren:
+
+```
+$ sudo yum install php72 php72-mbstring php72-gd
+```
+
+Anschließend muss die Apache-Konfiguration angepasst werden, damit zukünftig die neue Version geladen wird. Hierzu muss der bestehende Symlink von `15-php.conf` auf die Konfiguration für die neue Version gesetzt werden.
+
+```
+$ cd /etc/httpd/conf.modules.d
+$ sudo ln -s ./15-php-conf.7.2 ./15-php.conf
+```
+
+Anschließend Apache neu starten:
+
+```
+$ sudo service httpd graceful
 ```
 
 ## SSL-Zertifikat von Let’s Encrypt
