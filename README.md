@@ -4,6 +4,7 @@
 * [CSS](css.md)
 * [Docker](docker.md)
 * [JavaScript](javascript.md)
+* [PHP](php.md)
 * [Security](security.md)
 * [Server Administration](server-administration.md)
 * [Slate.js](slate-js.md)
