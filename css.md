@@ -9,3 +9,10 @@ Applying `height: 100%` to the `html` element will return the actual height of t
 * [WebKit Bug-Report und Diskussion](https://bugs.webkit.org/show_bug.cgi?id=141832)
 * [Verhalten in Chrome unter Android](https://developers.google.com/web/updates/2016/12/url-bar-resizing)
 * [Vorschlag `env(viewport-nav-resize)` Umgebungs-Variable](https://github.com/w3c/csswg-drafts/issues/2630)
+
+## `text-decoration` für `::after`/`::before`-Pseudoelemente
+
+Grundsätzlich kann mithilfe der `::after`- und `::before`- Pseudoelemente Text in ein Element eingefügt werden. Dadurch wird der über die `content`-Eigenschaft angegebene Text Teil des Inhalts des Elternelements. In der Folge können auf die Pseudoelemente keine separaten `text-decoration` Styles angewandt werden. `display: inline-block` auf dem Kindelement löst dieses Problem.
+ 
+* [CSS 2.1 Specs](https://www.w3.org/TR/2011/REC-CSS2-20110607/selector.html#before-and-after)
+* [StackOverflow](https://stackoverflow.com/questions/1238881/text-decoration-and-the-after-pseudo-element-revisited)
