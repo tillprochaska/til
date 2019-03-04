@@ -13,6 +13,18 @@ Applying `height: 100%` to the `html` element will return the actual height of t
 ## `text-decoration` für `::after`/`::before`-Pseudoelemente
 
 Grundsätzlich kann mithilfe der `::after`- und `::before`- Pseudoelemente Text in ein Element eingefügt werden. Dadurch wird der über die `content`-Eigenschaft angegebene Text Teil des Inhalts des Elternelements. In der Folge können auf die Pseudoelemente keine separaten `text-decoration` Styles angewandt werden. `display: inline-block` auf dem Kindelement löst dieses Problem.
+
+Damit diese Lösung auch im IE 11 funktioniert, muss zunächst explizit `text-decoration: underline` definiert werden, nur um es anschließend in einem separaten (!) Ruleset wieder zurückzusetzen:
+
+```css
+a::before {
+  text-decoration: underline;
+}
+
+a::before {
+  text-decoration: none;
+}
+```
  
 * [CSS 2.1 Specs](https://www.w3.org/TR/2011/REC-CSS2-20110607/selector.html#before-and-after)
 * [StackOverflow](https://stackoverflow.com/questions/1238881/text-decoration-and-the-after-pseudo-element-revisited)
