@@ -28,8 +28,8 @@ Offensichtlich ist die Lösung in dieser simplen Form für für Monorepos geeign
 ## Einfaches Deployment-Setup mit `rsync`
 Travis unterstützt das Deployment zu einer Reihe von Cloud-Providern. Um allerdings einfach nur das Ergebnis des Build-Prozesses zu deployen, reicht `rsync` aus. `rsync` überträgt Dateien per SSH auf einen Zielserver, wobei nur Dateien übertragen werden, die neu hinzugekommen sind oder verändert wurden. Die folgende Konfiguration setzt folgende Umgebungsvariablen voraus, die am besten über die Repository-Einstellung im Travis-Webinterface hinzugefügt und ggf. verschlüsselt werden sollten.
 
-* `TARGET_PUB_KEY`: Public Key des Zielservers, base64-kodiert
-* `TARGET_DEPLOY_KEY`: Private Key mit Zugriffsrechten auf Zielserver, base64-kodiert
+* `TARGET_PUB_KEY`: Public Key des Zielservers, base64-kodiert. Kann mittels `ssh-keyscan -t rsa {HOST}` abgefragt und anschließend mit `echo "{PUB_KEY} | base64"` kodiert werden.
+* `TARGET_DEPLOY_KEY`: Private Key mit Zugriffsrechten auf Zielserver, base64-kodiert. Ein neues Key-Pair kann mit `ssh-keygen -t rsa -f ~/.ssh/{UNIQUE_NAME}` erstellt werden. Anschließend mit `cat ~/.ssh/{UNIQUE_NAME} | base64` kodieren.
 * `TARGET_USER`: Nutzer des Zielservers
 * `TARGET_HOST`: Host des Zielservers
 
