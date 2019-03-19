@@ -71,3 +71,6 @@ after_success:
         ./{public,site,storage,vendor}
         $TARGET_USER@$TARGET_HOST:/var/www/virtual/mtvdev/api
 ```
+
+## Build-Artefakte für Deployment beibehalten
+Sofern das Deployment-Skript nicht direkt in der `.travis.yml` hinterlegt wird, sondern die [Deploy-Option](https://docs.travis-ci.com/user/deployment) verwendet wird, so sollte die Eigenschaft `skip_cleanup` auf `true` gesetzt werden. Andernfalls gehen alle Build-Artefakte verloren.
