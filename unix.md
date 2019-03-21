@@ -7,3 +7,39 @@
 ## GNU grep
 * `-E --extended-regex` erlaubt die Verwendung erweiterter regulärer Ausdrücke, z. B. von Quantifiern wie `+` oder `{n,m}`
 * `-o --only-matching` gibt nur den auf das Pattern passenden Text aus
+
+## Datei-/Verzeichnisberechtigungen setzen
+Mithilfe des Programms `chmod` können Datei- und Verzeichnisberechtigungen gesetzt werden. Dabei können Lese-, Schreib- und Ausführungsrechte für den Besitzer, für Gruppenmitglieder und alle anderen Nutzer getrennt hinzugefügt (`+`) oder entzogen (`-`) werden.
+
+```
+chmod [Benutzertyp][+|-][Berechtigung]
+```
+
+| Benutzertyp     | Modus |
+|-----------------|-------|
+| Besitzer (user) | u     |
+| Gruppe (group)  | g     |
+| Andere (other)  | o     |
+
+| Berechtigung         | Kürzel |
+| ---------------------|--------|
+| Lese (read)          | r      |
+| Schreib (write)      | w      |
+| Ausführung (execute) | x      |
+
+### Beispiele
+
+Schreibrechte für den Besitzer hinzufügen:
+```
+chmod u+w myfile
+```
+
+Schreib- und Leserechte für die Gruppe hinzufügen:
+```
+chmod u+rw myfile
+```
+
+Schreib- und Ausführungsrechte für alle anderen entziehen:
+```
+chmod o-wx myfile
+```
