@@ -66,3 +66,12 @@ Der Prozess kann dann mithilfe von `kill` beendet werden:
 ```
 kill -9 48965
 ```
+
+## Symbolische Links
+Mit dem `ln`-Programm (kurz für »link«) können neue harte und symbolische Links erstellt werden. Standardmäßig erstellt das Programm harte Links, mit der `-s`-Flag auch symbolische. Harte Links verknüpfen einen Dateinamen mit Inhalten auf dem Dateisystem, während symbolische Links eine andere Datei referenzieren.
+
+Symbolischen Link von `referenced_file.txt` auf `link_file.txt` erstellen:
+
+```
+ln -s source_file.txt linked_file.txt
+```
