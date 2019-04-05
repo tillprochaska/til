@@ -28,7 +28,6 @@ chmod [Benutzertyp][+|-][Berechtigung]
 | Ausführung (execute) | x      |
 
 ### Beispiele
-
 Schreibrechte für den Besitzer hinzufügen:
 ```
 chmod u+w myfile
@@ -42,4 +41,28 @@ chmod u+rw myfile
 Schreib- und Ausführungsrechte für alle anderen entziehen:
 ```
 chmod o-wx myfile
+```
+
+## Prozess unter bestimmtem Port finden und beenden
+`lsof` steht für »list open files« und ist ein Hilfsprogramm, das Informationen über geöffnete Dateien anzeigt. Da unter Unix-Systemen alles eine Datei ist, kann es für viele Anwendungszwecke hilfrich sein, unter anderem um Herauszufinden, welcher Prozess einen bestimmten Port belegt.
+
+Die Liste kann gefiltert werden, z. B. mithilfe der `-i`-Flag nach Dateien die mit einer bestimmten Internet-Adresse übereinstimmen.
+
+Filtern nach IPv4, TCP-Verbindungen und Port 5000:
+
+```
+lsof -i 4TCP:5000
+```
+
+Ausgegeben wird eine Tabelle mit verschiedenen Informationen, u. a. mit der Prozess-Id (PID):
+
+```
+COMMAND   PID          USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    48965 tillprochaska   21u  IPv6 0xc664f5446b99e6d1      0t0  TCP *:hbci (LISTEN)
+```
+
+Der Prozess kann dann mithilfe von `kill` beendet werden:
+
+```
+kill -9 48965
 ```
