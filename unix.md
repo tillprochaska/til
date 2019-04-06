@@ -1,8 +1,21 @@
 # Unix
 
-* macOS basiert auf BSD (kurz für *Berkley Software Distribution*), einem Unix-basierten Betriebssystem.
-* GNU/Linux ist ein unix-ähnliches Betriebssystem, das aus der Kombination aus Linux-Kernel und dem GNU-Projekt, einer Reihe von Softwarepaketen.
-* Viele Standard-Tools aus BSD und GNU heißen zwar ähnlich und erfüllen auch einen ähnlichen Zweck, sie unterscheiden sich allerdings häufig in Details, was zu Verwirrung führen kann. So liefer beispielsweise `grep` unter macOS häufig andere Ergebnisse als `grep` unter einem GNU/Linux.
+* macOS basiert auf BSD (kurz für *Berkley Software Distribution*), einem Unix-basierten Betriebssystem. GNU/Linux ist ein Unix-ähnliches Betriebssystem, das aus der Kombination aus Linux-Kernel und dem GNU-Projekt, einer Reihe von Softwarepaketen. Viele Standard-Tools aus BSD und GNU heißen zwar ähnlich und erfüllen auch einen ähnlichen Zweck, sie unterscheiden sich allerdings häufig in Details, was zu Verwirrung führen kann. So liefer beispielsweise `grep` unter macOS häufig andere Ergebnisse als `grep` unter einem GNU/Linux.
+
+## GNU Coreutils (und weitere) installieren
+Mit Homebrew können einfach die GNU Core Utilities installiert werden. Das macht vieles leichter, weil die o. g. Unterschiede der macOS Utils wegfallen.
+
+```
+brew install coreutils
+```
+
+[Alle GNU Core Utilities](https://en.wikipedia.org/wiki/List_of_GNU_Core_Utilities_commands) sind dann mit `g` als Präfix verfügbar. Die GNU-Version von `ls` kann dann also über `gls` ausgeführt werden.
+
+Außerdem praktisch sind die unter `findutils` zusammengefassten Programme sowie `grep` und `sed`, die mit den folgenden Brew-Formeln installiert werden können:
+
+```
+brew install findutils grep gnu-sed
+```
 
 ## GNU grep
 * `-E --extended-regex` erlaubt die Verwendung erweiterter regulärer Ausdrücke, z. B. von Quantifiern wie `+` oder `{n,m}`
