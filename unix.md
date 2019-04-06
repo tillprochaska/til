@@ -75,3 +75,17 @@ Symbolischen Link von `referenced_file.txt` auf `link_file.txt` erstellen:
 ```
 ln -s source_file.txt linked_file.txt
 ```
+
+## Datei- und Verzeichnisgrößen anzeigen
+Das `du`-Programm (kurz für »disk usage«) zeigt die Größe bestimmter oder mehrerer Verzeichnisse an. Hilfreich können auch die folgenden Flags sein:
+
+| Flag | Beschreibung |
+|------|--------------|
+| `--human-readable` | wandelt die Größe automatisch in einen gut lesbare Einheit, z. B. Megabyte oder Gigabyte um |
+| `--total` | zeigt zusätzlich die Gesamtgröße aller Dateien/Verzeichnisse an |
+
+Größe aller Dateien und Verzeichnisse im aktuellen Verzeichnis sowie deren Gesamtgröße anzeigen:
+
+```
+du --total --human-readable *
+```
