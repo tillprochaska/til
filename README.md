@@ -10,7 +10,7 @@
 * [Security](security.md)
 * [Server Administration](server-administration.md)
 * [Slate.js](slate-js.md)
-* [Steuer](steuer.md)
+* [Steuer](steuer-buchhaltung.md)
 * [Svelte.js](svelte.md)
 * [SVG](svg.md)
 * [Travis CI](travis-ci.md)
