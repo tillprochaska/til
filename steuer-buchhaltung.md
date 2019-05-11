@@ -1,4 +1,4 @@
-# Steuer
+# Steuer & Buchhaltung
 
 ## Geschäftsessen als Betriebsausgabe
 * Die Kosten für Essen aus geschäftlichen Anlass, während derer also betriebsfremde Personen z. B. zum Zwecke der Geschäftsanbahnung bewirtet werden, können nur zu **70 Prozent** als Betriebsausgabe geltend gemacht werden.
