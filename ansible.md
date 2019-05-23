@@ -33,3 +33,18 @@ authorized_key:
 with_items: "{{ admin_users }}"
 become: yes
 ```
+
+### Sudorechte für Gruppe
+
+```yml
+name: allow password-less sudo for admin group
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    regexp: "^%{{ admin_group }} ALL="
+    line: "%{{ admin_group }} ALL=(ALL) NOPASSWD: ALL"
+    validate: "/usr/sbin/visudo -cf %s"
+  become: yes
+```
+
+Der `validate`-Schritt stellt sicher, dass es sich um eine valide Sudoers-Konfiguration handelt, um zu verhindern, dass der Zugriff auf die Maschine unmöglich wird.
