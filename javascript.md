@@ -39,3 +39,7 @@ Grundsätzlich sind zwei Scenarien zu beachten:
 
 ## Memory Leaks debuggen
 * https://developers.google.com/web/tools/chrome-devtools/console/utilities?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3#geteventlistenersobject
+
+## Objekt ohne Prototype/Vererbung
+
+Mithilfe von `Object.create(null)` wird ein neue Objekt ohne `Object.prototype` erstellt. Im Gegensatz dazu erzeugen Objektliterale (`{}`) oder auch die Instanziierung mit `Object.create({})` ein neues Objekt mit `Object.prototype` als Prototypen.
