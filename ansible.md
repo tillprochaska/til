@@ -48,3 +48,19 @@ name: allow password-less sudo for admin group
 ```
 
 Der `validate`-Schritt stellt sicher, dass es sich um eine valide Sudoers-Konfiguration handelt, um zu verhindern, dass der Zugriff auf die Maschine unmöglich wird.
+
+## Blöcke
+Mithilfe von Blöcken können mehrere Tasks gruppiert werden. So können einfach bestimmte Optionen auf alle Tasks des Blocks angewandt werden. Im folgenden Beispiel werden beide Tasks mit Root-Rechten ausgeführt.
+
+`tasks/main.yml`
+```yml
+- block:
+  
+  - yum: fail2ban
+    state: latest
+    
+  - systemd: fail2ban
+    state: started
+    
+  become: yes
+```
