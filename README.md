@@ -4,6 +4,7 @@
 * [Ansible](ansible.md)
 * [CSS](css.md)
 * [Docker](docker.md)
+* [Git](git.md)
 * [JavaScript](javascript.md)
 * [PHP](php.md)
 * [React](react.md)
