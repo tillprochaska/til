@@ -34,12 +34,25 @@ Der Prozess des visuellen Wahrnehmung kann in drei Stufen beschrieben werden:
 
 ## Visuelle Variablen
 
-Der Begriff wurde durch den französischen Kartographen Jacques Bertin geprägt. Er beschreibt visuelle Merkmale, durch die Daten repräsentiert werden können. Je nach Art der Daten eignen sich bestimmte visuelle Variablen besser oder schlechter.
+Der Begriff wurde durch den französischen Kartographen Jacques Bertin geprägt. Er beschreibt visuelle Merkmale (wie z. B. Position, Fläche, Helligkeit, …), durch die Daten repräsentiert werden können. Je nach Art der Daten eignen sich bestimmte visuelle Variablen besser oder schlechter. In der Regel wird die selbe Information redundant, also durch mehrere Merkmal kodiert. In Balkendiagrammen wird ein Wert zwar primär durch die Position des Balkenendes, aber sekundär auch durch Fläche und Länge des Balkens kodiert.
 
-* **Numerische Werte** können auf einer Intervall- oder Verhältnisskala dargestellt werden. Werte auf einer Intervall-Skala sind geordnet und der Abstand zwischen den einzelnen Werten ist bekannt. Ein typisches Beispiel hierfür ist z. B. die Temperatur. Werte auf eine Verhältnisskala haben zusätzlich einen absoluten Nullpunkt, z. B. in Meter gemessene Längen (oder aber Temperatur in Kelvin).
+Unabhängig von der Art der Daten eignet sich grundsätzlich die Position am besten zur visuellen Kodierung von Daten, da der Mensch in der Lage ist, selbst sehr kleine Positionsunterschiede präzise zu unterscheiden. Durch die Abbildung einer Skala können Positionen selbst über mehrere Grafiken hinweg leicht verglichen werden.
 
-* **Ordinalwerte** sind ebenfalls geordnet. Die Abstände der Werte zueinander sind aber nicht bekannt. Ein Beispiel hierfür ist z. B. Zustimmung auf einer Likert-Skala (stimme voll zu, stimme zu, unentschieden, …).
+### Numerische Werte
+können auf einer Intervall- oder Verhältnisskala dargestellt werden. Werte auf einer Intervall-Skala sind geordnet und der Abstand zwischen den einzelnen Werten ist bekannt. Ein typisches Beispiel hierfür ist z. B. die Temperatur. Werte auf eine Verhältnisskala haben zusätzlich einen absoluten Nullpunkt, z. B. in Meter gemessene Längen (oder aber Temperatur in Kelvin).
 
-* **Kategorien** können auf einer Nominalskala dargestellt werden. Die einzelnen Werte können zwar unterschieden werden, sie haben aber keine natürliche Rangfolge.
+Geeignete visuelle Variablen: Position, Länge, (Fläche)
+
+### Ordinalwerte
+sind ebenfalls geordnet. Die Abstände der Werte zueinander sind aber nicht bekannt. Ein Beispiel hierfür ist z. B. Zustimmung auf einer Likert-Skala (stimme voll zu, stimme zu, unentschieden, …).
+
+Geeignete visuelle Variablen: Position, Helligkeit
+
+### Kategorien
+können auf einer Nominalskala dargestellt werden. Die einzelnen Werte können zwar unterschieden werden, sie haben aber keine natürliche Rangfolge.
+
+Geeignete visuelle Variablen: Position, Form, Farbton
+
+**Eine effektive Visualisierung sollte die wichtigsten Daten mithilfe der am besten geeigneten visuellen Variable kodieren. Weniger gut geeignete Variablen sollten lediglich für die redundaten Kodierung verwendet werden.**
 
 * Koponen und Hildén, Data Visualization Handbook, pp. 58ff
