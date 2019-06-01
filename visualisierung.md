@@ -56,3 +56,15 @@ Geeignete visuelle Variablen: Position, Form, Farbton
 **Eine effektive Visualisierung sollte die wichtigsten Daten mithilfe der am besten geeigneten visuellen Variable kodieren. Weniger gut geeignete Variablen sollten lediglich für die redundaten Kodierung verwendet werden.**
 
 * Koponen und Hildén, Data Visualization Handbook, pp. 58ff
+
+## Grundsätzliches
+
+1. Visualisierungen erlauben den Vergleich zwischen verschiedenen Werten. In der Folge werden Unterschiede in der Darstellung immer als Unterschiede in den zugrundeliegenden Daten interpretiert. Unterschiede in der Darstellung aus rein ästhetischen Gründen sollten deshalb vermieden werden, da sie in der Regel irreführend sind. So sollten beispielsweise Datenpunkte eines Diagramms nur dann mit Linien verbunden werden, wenn es sich auch tatsächlich um kontinuierliche Daten handelt.
+
+2. Mehrere Grafiken, die die gleiche Art von Daten darstellen, sollten die gleich gestaltet sein und die gleiche Skala verwenden. Wird z. B. mithilfe von zwei Balkendiagrammen das Wachstum des BIP zweier Länder dargestellt, so sollten beide Diagramme die gleiche Achsenskalierung verwenden.
+
+3. Sofern kontinuierliche Daten klassifiziert werden müssen, bieten sich hierfür Quantile an. Gleichmäßige Intervalle sind meist schlecht geeignet, da in den extremen Intervallen häufig nur sehr wenige Werte liegen.
+
+4. Anstatt mehrere Datensätze in einer einzelnen Grafik darzustellen, kann es häufig sinnvoll sein, die Datensätze in mehreren einzelnen, vergleichbaren Grafiken darzustellen. 
+
+5. Mehrere Grafiken, die die gleiche Art von Daten darstellen, sollten die gleich gestaltet sein und die gleiche Skala verwenden. Wird z. B. mithilfe von zwei Balkendiagrammen das Wachstum des BIP zweier Länder dargestellt, so sollten beide Diagramme die gleiche Achsenskalierung verwenden. Skalen etc. sollten dabei so gewählt werden, dass die einzelnen Grafiken konsistent sind.
