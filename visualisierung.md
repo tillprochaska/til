@@ -68,3 +68,7 @@ Geeignete visuelle Variablen: Position, Form, Farbton
 4. Anstatt mehrere Datensätze in einer einzelnen Grafik darzustellen, kann es häufig sinnvoll sein, die Datensätze in mehreren einzelnen, vergleichbaren Grafiken darzustellen. 
 
 5. Mehrere Grafiken, die die gleiche Art von Daten darstellen, sollten die gleich gestaltet sein und die gleiche Skala verwenden. Wird z. B. mithilfe von zwei Balkendiagrammen das Wachstum des BIP zweier Länder dargestellt, so sollten beide Diagramme die gleiche Achsenskalierung verwenden. Skalen etc. sollten dabei so gewählt werden, dass die einzelnen Grafiken konsistent sind.
+
+6. Dekorative Elemente und ästhetisch ansprechende Visualisierungen können dem Verständnis zusträglich sein. Im Vergleich zu einfachen, minimalistischen Visualisierungen ist die Gefahr, eine irreführende Darstellung zu wählen, jedoch deutlich höher. Deshalb ist es im Regelfall ratsam, auf dekorative Elemente zu verzichten.
+
+7. Da die dreidimensionale Wahrnehmung des Menschen eingeschränkt ist, sollten dreidimensionale Visualisierungen grundsätzlich vermieden werden – insbesondere dann wenn die 3D-Darstellung keinen Mehrwert gegenüber einer anderen Darstellung bietet.
