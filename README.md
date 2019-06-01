@@ -19,4 +19,5 @@
 * [TypeScript](typescript.md)
 * [Unix](unix.md)
 * [Vim](vim.md)
+* [Visualisierung](visualisierung.md)
 * [Web Performance](web-performance.md)
