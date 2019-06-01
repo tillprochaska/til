@@ -29,3 +29,17 @@ Der Prozess des visuellen Wahrnehmung kann in drei Stufen beschrieben werden:
 3. In der dritten Stufe werden die zuvor identifizierten Merkmale zu komplexeren Objekten kombiniert und im Arbeitsgedächtnis gespeichert. Diese Objekte werden dann mit im Gedächtnis gespeicherten Informationen verglichen. Die Anzahl an Informationen, die im Arbeitsgedächtnis gespeichert werden können, ist begrenzt. Dadurch ist die Verarbeitung in der dritten Stufe langsamer und anstregender.
 
 **Bei der Gestaltung von Grafiken sollte die Funktionsweise der visuellen Wahrnehmung berücksichtigt werden. Relevante Informationen sollten so dargestellt werden, dass sie in den ersten beiden Wahrnehmungsstufen wahrgehommen werden können.** Einzelne Objekte können am einfachsten wahrgenommen werden, wenn sie durch eines der Merkmale (Form, Farbe, Bewegung) unterscheiden. Ein rotes Rechteck kann leicht unter roten (oder noch einfacher, unter blauen) Kreisen identifiziert werden. Aufwändiger ist es allerdings, wenn sich das gesuchte Objekt nur in der Kombination aus mehreren Merkmalen vom Rest unterscheidet: Ein rotes Rechteck unter blauen Rechtecken und roten Kreisen ist schwieriger zu finden. Es reicht nicht mehr, nur nach Form oder Farbe zu suchen.
+
+* Koponen und Hildén, Data Visualization Handbook, pp. 49ff
+
+## Visuelle Variablen
+
+Der Begriff wurde durch den französischen Kartographen Jacques Bertin geprägt. Er beschreibt visuelle Merkmale, durch die Daten repräsentiert werden können. Je nach Art der Daten eignen sich bestimmte visuelle Variablen besser oder schlechter.
+
+* **Numerische Werte** können auf einer Intervall- oder Verhältnisskala dargestellt werden. Werte auf einer Intervall-Skala sind geordnet und der Abstand zwischen den einzelnen Werten ist bekannt. Ein typisches Beispiel hierfür ist z. B. die Temperatur. Werte auf eine Verhältnisskala haben zusätzlich einen absoluten Nullpunkt, z. B. in Meter gemessene Längen (oder aber Temperatur in Kelvin).
+
+* **Ordinalwerte** sind ebenfalls geordnet. Die Abstände der Werte zueinander sind aber nicht bekannt. Ein Beispiel hierfür ist z. B. Zustimmung auf einer Likert-Skala (stimme voll zu, stimme zu, unentschieden, …).
+
+* **Kategorien** können auf einer Nominalskala dargestellt werden. Die einzelnen Werte können zwar unterschieden werden, sie haben aber keine natürliche Rangfolge.
+
+* Koponen und Hildén, Data Visualization Handbook, pp. 58ff
