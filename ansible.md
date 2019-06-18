@@ -10,6 +10,13 @@
 ## Privilege Escalation
 Der `become`-Parameter kann sowohl für einzelne Tasks als auch für ganze Rollen und Playbooks gesetzt werden. Die entsprechenden Tasks werden dann mit Root-Rechten ausgeführt.
 
+## Debugging von Variablen/Facts
+Alle Variablen und Facts für einen bestimmten Host können wie folgt angezeigt werden:
+
+```
+ansible -i {{ HOSTFILE }} -m setup {{ HOSTNAME }}
+```
+
 ## Praktische Tasks
 
 ### Mehrere Nutzer hinzufügen
