@@ -25,6 +25,14 @@ Ansible ermöglicht es ganz einfach, Hosts einen sprechenderen Namen zu geben:
 web01 ansible_host=1.2.3.4
 ```
 
+## Variablen via Kommandozeile setzen
+
+Mithilfe der `--extra-vars`-Flag können Variablen direkt über die Kommandozeile gesetzt werden:
+
+```
+ansible-playbook --extra-vars="enable_variant=true log_path=/var/log/"
+```
+
 ## Praktische Tasks
 
 ### Mehrere Nutzer hinzufügen
