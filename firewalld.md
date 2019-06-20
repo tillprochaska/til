@@ -6,13 +6,13 @@ Services sind letzten Endes Listen vordefinierter Ports/Protokolle, die es einfa
 Anstatt manuell den entsprechenden Port zu öffnen:
 
 ```
-firewalld-cmd --add-port=80/tcp
+firewall-cmd --add-port=80/tcp
 ```
 
 kann mit dem gleichen Effekt einfach der Service hinzugefügt werden:
 
 ```
-firewalld-cmd --add-service=http
+firewall-cmd --add-service=http
 ```
 
 Neben einer Liste von Ports enthalten Services auch eine kurze Beschreibung. Eine Liste der Standard-Services findet sich im Verzeichnis `/usr/lib/firewalld/services`. Dort ist für jeden Service eine XML-Konfigurationsdatei hinterlegt.
