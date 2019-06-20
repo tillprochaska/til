@@ -17,6 +17,14 @@ Alle Variablen und Facts für einen bestimmten Host können wie folgt angezeigt 
 ansible -i {{ HOSTFILE }} -m setup {{ HOSTNAME }}
 ```
 
+## Aliase für Hosts
+Ansible ermöglicht es ganz einfach, Hosts einen sprechenderen Namen zu geben:
+
+```ini
+[webservers]
+web01 ansible_host=1.2.3.4
+```
+
 ## Praktische Tasks
 
 ### Mehrere Nutzer hinzufügen
