@@ -1,6 +1,8 @@
 # Unix
 
-* macOS basiert auf BSD (kurz für *Berkley Software Distribution*), einem Unix-basierten Betriebssystem. GNU/Linux ist ein Unix-ähnliches Betriebssystem, das aus der Kombination aus Linux-Kernel und dem GNU-Projekt, einer Reihe von Softwarepaketen. Viele Standard-Tools aus BSD und GNU heißen zwar ähnlich und erfüllen auch einen ähnlichen Zweck, sie unterscheiden sich allerdings häufig in Details, was zu Verwirrung führen kann. So liefer beispielsweise `grep` unter macOS häufig andere Ergebnisse als `grep` unter einem GNU/Linux.
+
+## macOS
+macOS basiert auf BSD (kurz für *Berkley Software Distribution*), einem Unix-basierten Betriebssystem. GNU/Linux ist ein Unix-ähnliches Betriebssystem, das aus der Kombination aus Linux-Kernel und dem GNU-Projekt, einer Reihe von Softwarepaketen. Viele Standard-Tools aus BSD und GNU heißen zwar ähnlich und erfüllen auch einen ähnlichen Zweck, sie unterscheiden sich allerdings häufig in Details, was zu Verwirrung führen kann. So liefer beispielsweise `grep` unter macOS häufig andere Ergebnisse als `grep` unter einem GNU/Linux.
 
 ## GNU Coreutils (und weitere) installieren
 Mit Homebrew können einfach die GNU Core Utilities installiert werden. Das macht vieles leichter, weil die o. g. Unterschiede der macOS Utils wegfallen.
