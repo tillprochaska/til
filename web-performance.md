@@ -16,3 +16,8 @@ window.addEventListener('touchstart', handler, { passive: true });
 ⚠️ Da Scroll-Events anders als Mausrad- und Touch-Events nicht abgebrochen werden können, also standardmäßig passiv sind, müssen diese nicht explizit als passiv markiert werden.
 
 * [EventListenerOptions Spec Explainer](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md)
+
+## JSON wird schneller geparst als JavaScript
+Da die Grammatik für JSON deutlich kleiner ist als die für ECMAScript, parsen Browser JSON i. d. R. deutlich schneller als JavaScript-Code. Deshalb ist es sinnvoll, beispielsweise große Konfigurationsobjekte als JSON darzustellen zu parsen, anstatt sie als Objekt-Literale direkt in die Anwendung aufzunehmen.
+
+* [Mathias Bynens auf Twitter](https://twitter.com/mathias/status/1143551692732030979)
