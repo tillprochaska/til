@@ -104,3 +104,22 @@ Größe aller Dateien und Verzeichnisse im aktuellen Verzeichnis sowie deren Ges
 ```
 du --total --human-readable *
 ```
+
+## SSH Escape Sequences
+Normalerweise werden bei einer aktiven SSH-Session alle Tastenanschläge an den Remote-Computer weitergeleitet. Sollte die Verbindung zum Remote-Computer einmal verloren gehen, kann die SSH-Session dann nicht mehr mit `Ctrl + D` o. ä. beendet werden. Es gibt jedoch eine Reihe von *Escape-Sequenzen*, die mit der `~` beginnen und nicht weitergeleitet, sondern lokal behandelt werden:
+
+```
+ ~.   - terminate connection (and any multiplexed sessions)
+ ~B   - send a BREAK to the remote system
+ ~C   - open a command line
+ ~R   - request rekey
+ ~V/v - decrease/increase verbosity (LogLevel)
+ ~^Z  - suspend ssh
+ ~#   - list forwarded connections
+ ~&   - background ssh (when waiting for connections to terminate)
+ ~?   - this message
+ ~~   - send the escape character by typing it twice
+(Note that escapes are only recognized immediately after newline.)
+```
+
+Die Verbindung kann dann z. B. mit `Enter + ~ + .` beendet werden.
