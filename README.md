@@ -8,6 +8,7 @@
 * [firewalld](firewalld.md)
 * [Git](git.md)
 * [GitHub](github.md)
+* [HTTP](http.md)
 * [JavaScript](javascript.md)
 * [PHP](php.md)
 * [React](react.md)
