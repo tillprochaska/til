@@ -27,10 +27,28 @@ web01 ansible_host=1.2.3.4
 
 ## Variablen via Kommandozeile setzen
 
-Mithilfe der `--extra-vars`-Flag können Variablen direkt über die Kommandozeile gesetzt werden:
+Mithilfe der `--extra-vars` bzw. `-e` Flag können Variablen direkt über die Kommandozeile gesetzt werden:
 
 ```
-ansible-playbook --extra-vars="enable_variant=true log_path=/var/log/"
+ansible-playbook --extra-vars="enable_variant=true log_path=/var/log/ playbook.yml"
+```
+
+## Playbook-Ausführung auf Hosts/Gruppen beschränken oder davon ausnehmen
+
+Mithilfe der `--limit` bzw. `-l` Flag kann die Ausführung eines Playbooks auf bestimmte Gruppen oder Hosts beschränkt werden (Whitelist). Es sind auch AND- und OR-Kombination möglich.
+
+```
+ansible-playbook --limit 'staging' playbook.yml # Gruppe
+ansible-playbook --limit 'webserver_01 # Host
+ansible-playbook --limit 'webserver:database' # Hosts, die in Gruppe `webserver` ODER `database`
+ansible-playbook --limit `webserver:&staging' # Hosts, die in Gruppen `webserver` UND `staging`
+```
+
+Alternativ können auch bestimmte Gruppen oder Hosts ausgenommen werden (Blacklist). Dazu wird vor die entsprechenden Identifier ein `!` gesetzt.
+
+```
+ansible-playbook --limit '!production' playbook.yml
+ansible-playbook --limit '!webserver_01' playbook.yml
 ```
 
 ## Praktische Tasks
