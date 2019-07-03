@@ -37,3 +37,7 @@
 HTTP Public Key Pinning (HPKP) ist ein Verfahren, um Man-in-the-Middle-Attacken mittels gefälschten, aber von einer glaubwürdigen Zertifizierungsstelle erstellten, Zertifikaten auszuschließen. Über den `Pin-Key-Pins`-Header werden Hashes von einem oder mehreren Keys der Key-Chain übertragen. Für Browser ist dies die Anweisung, bei zukünftigen Verbindungen nur Zertifikate mit diesen Hashes zu akzeptieren. Zusammen mit den Hashes wird eine Gültigkeitsdauer übertragen.
 
 Da Browser Zertifikate, die mit anderen privaten Schlüsseln erstellt wurden, besteht die Gefahr, die Erreichbarkeit von Webseiten einzuschränken. Insbesondere können ohne den ursprünglichen privaten Schlüssel keine neuen Zertifikate erstellt werden. Deshalb ist es äußerst wichtig, diese entsprechend zu sichern. Tools wie beispielsweise `certbot-auto` erstellen zudem regulär für jedes neue Zertifikat einen neuen privaten Schlüssel.
+
+## ACME
+
+ACME steht für Automated Certificate Management Environment und ist ein Protokoll, dass für die automatisierte Kommunikation zwischen Zertifizierungsstellen und Clients verwendet wird, insbesondere für die Ownership-Verifikation zum Beziehen von Zertifikaten. Es wurde für Let’s Encrypt entwickelt.
