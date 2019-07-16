@@ -37,10 +37,8 @@ Um auf der sicheren Seite zu sein, deshalb *immer* die Basis angeben – selbst 
 "Hallo Welt".replace("Hallo", "$'") // " Welt Welt" (Ersetzung mit nachfolgendem String)
 ```
 
-Das kann insbesondere in Verbindung mit Regexes als Suchmuster sehr praktisch sein, kann aber auch überraschend kommen. Im Falle von unvorhersehbaren Replacement-Stringse also am besten eine Replace-Funktion verwenden:
+Das kann insbesondere in Verbindung mit Regexes als Suchmuster sehr praktisch sein, kann aber auch [überraschend kommen]((https://www.peterkroener.de/string-prototype-replace-ist-eine-falle/). Im Falle von unvorhersehbaren Replacement-Stringse also am besten eine Replace-Funktion verwenden:
 
 ```js
 string.replace("Hallo", () => replacementString);
 ```
-
-* [Blog von Peter Kröner](https://www.peterkroener.de/string-prototype-replace-ist-eine-falle/)
