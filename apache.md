@@ -38,6 +38,6 @@ Alternativ kann eine Rewrite Condition verwendet werden, die auf die Umgebungsva
 RewriteCond %{DOCUMENT_ROOT}/static/$1
 RewriteRule (.*) static/$1 [END]
 
-RewriteCond %{REDIRECT_STATUS} ^$
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
 RewriteRule static/(.*) 404.html [L]
 ```
