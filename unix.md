@@ -123,3 +123,26 @@ Normalerweise werden bei einer aktiven SSH-Session alle Tastenanschläge an den 
 ```
 
 Die Verbindung kann dann z. B. mit `Enter + ~ + .` beendet werden.
+
+## Execution vs. Sourcing
+Es gibt zwei Variante, ein Shell-Script auszuführen. Die erste Variante führt das Script in einem *separaten* Shell-Prozess aus. Variablen, die das aufgerufene Script exportiert, sind aus diesem Grund nicht im aufrufenden Shell-Prozess verfügbar. Dazu wird lediglich der Pfad zu einem ausführbaren Script angegeben.
+
+
+```shell
+# /usr/local/bin/my-script
+export ENVIRONMENT=PRODUCTION
+```
+
+```cmd
+$ /usr/local/bin/my-script
+$ echo $ENVIRONMENT
+```
+
+Die Ausgabe der obigen Aufrufe ist leer. Die zweite Variante, das sogenannte *Sourcing* führt das Script im *aktuellen* Shell-Prozess aus. Entsprechend sind alle exportierten Variablen dann auch verfügbar:
+
+```cmd
+$ source /usr/local/bin/my-script
+$ echo $ENVIRONMENT
+```
+
+Die obigen Aufrufe geben `PRODUCTION` zurück.
