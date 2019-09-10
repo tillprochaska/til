@@ -146,3 +146,15 @@ $ echo $ENVIRONMENT
 ```
 
 Die obigen Aufrufe geben `PRODUCTION` zurück.
+
+## `rsync` Includes und Excludes
+
+> Rsync builds an ordered list of include/exclude options as specified on the command line. Rsync checks each file and directory name against each exclude/include pattern in turn. The first matching pattern is acted on. If it is an exclude pattern, then that file is skipped. If it is an include pattern then that filename is not skipped. If no matching include/exclude pattern is found then the filename is not skipped.
+> 
+> So, if you want to include only specific files, you first need to include those specific files, then exclude all other files:
+> 
+> ```
+> --include="*/" --include="*.cfg" --exclude="*"
+> ```
+
+* [rsync: --include-from vs. --exclude-from what is the actual difference?](https://stackoverflow.com/questions/19296190/rsync-include-from-vs-exclude-from-what-is-the-actual-difference)
