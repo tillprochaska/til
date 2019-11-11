@@ -15,7 +15,7 @@ Um die notwendigen Daten für die EÜR autoamtisch (und korrekt) an Steuererklä
 
 Anschließend können die Daten unter *Assistent > Berichte erstellen > Gewinne* direkt an Steuererklärung.app gesandt werden.
 
-## Umsatzsteuervergütung
+## Umsatzsteuervergütung im EU-Ausland
 
 Um im EU-Ausland gezahlte Umsatzsteuer zurückzuerhalten, kann diese nicht einfach in der Umsatzsteuervoranmledung angegeben werden. Stattdessen muss die Vorsteuer beim jeweiligen EU-Staat geltend gemacht werden. Der Einfachheit halber wird ein entsprechender Antrag aber nicht bei dem EU-Staat direkt eingereicht, sondern beim Bundeszentralamt für Steuern, das den Antrag zunächst prüft und dann an den Mitgliedsstaat weiterleitet.
 
