@@ -72,3 +72,7 @@ Geeignete visuelle Variablen: Position, Form, Farbton
 6. Dekorative Elemente und ästhetisch ansprechende Visualisierungen können dem Verständnis zusträglich sein. Im Vergleich zu einfachen, minimalistischen Visualisierungen ist die Gefahr, eine irreführende Darstellung zu wählen, jedoch deutlich höher. Deshalb ist es im Regelfall ratsam, auf dekorative Elemente zu verzichten.
 
 7. Da die dreidimensionale Wahrnehmung des Menschen eingeschränkt ist, sollten dreidimensionale Visualisierungen grundsätzlich vermieden werden – insbesondere dann wenn die 3D-Darstellung keinen Mehrwert gegenüber einer anderen Darstellung bietet.
+
+## Barrierefreiheit von Farbpaletten
+
+Mit dem [Coblis Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/) lassen sich die meisten Farbwahrnehmungsstörungen simulieren, um so zu validieren, ob gewählte Farbpaletten zugänglich sind.
