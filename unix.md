@@ -158,3 +158,9 @@ Die obigen Aufrufe geben `PRODUCTION` zurück.
 > ```
 
 * [rsync: --include-from vs. --exclude-from what is the actual difference?](https://stackoverflow.com/questions/19296190/rsync-include-from-vs-exclude-from-what-is-the-actual-difference)
+
+## Zeilennummern in `less` anzeigen
+
+```
+less -N file.text
+```
