@@ -3,6 +3,7 @@
 * [Apache](apache.md)
 * [Apple](apple.md)
 * [Ansible](ansible.md)
+* [AWS](aws.md)
 * [CSS](css.md)
 * [Docker](docker.md)
 * [firewalld](firewalld.md)
