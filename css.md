@@ -28,3 +28,25 @@ a::before {
  
 * [CSS 2.1 Specs](https://www.w3.org/TR/2011/REC-CSS2-20110607/selector.html#before-and-after)
 * [StackOverflow](https://stackoverflow.com/questions/1238881/text-decoration-and-the-after-pseudo-element-revisited)
+
+## CSS Grid Autoplacement im Internet Explorer 11
+
+IE 11 unterstützt einige einfache Grid-Features (mit dem Präfix `-ms-`), allerdings leider kein Autoplacement von Grid-Zellen. D.h. die Zellen müssen explizit mithilfe von `-ms-grid-row` und `-ms-grid-column` im Grid positioniert werden, z.B. so:
+
+```css
+.grid > *:nth-element(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.grid > *:nth-element(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+...
+```
+
+Das ist etwas umständlich, allerdings kann Autoprefixer das übernehmen, sofern die Gesamtanzahl an Zellen bekannt und mittels `grid-template-rows` und `grid-template-columns` gesetzt ist.
+
+* [Autoprefixer-Doku zu Grid-Autoplacement](https://github.com/postcss/autoprefixer#grid-autoplacement-support-in-ie)
