@@ -50,3 +50,19 @@ IE 11 unterstützt einige einfache Grid-Features (mit dem Präfix `-ms-`), aller
 Das ist etwas umständlich, allerdings kann Autoprefixer das übernehmen, sofern die Gesamtanzahl an Zellen bekannt und mittels `grid-template-rows` und `grid-template-columns` gesetzt ist.
 
 * [Autoprefixer-Doku zu Grid-Autoplacement](https://github.com/postcss/autoprefixer#grid-autoplacement-support-in-ie)
+
+## `@property` rule
+
+Die `@property`-Rule ermöglicht es, Custom Properties zu *registrieren*, d.h. ihnen nicht nur einen Wert zu geben, sondern auch einen Typ und Vererbungsverhalten zu deklarieren.
+
+```css
+@property --color-brand {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: blue;
+}
+```
+
+Diese `@property`-Regel ist Teil der APIs, die mit CSS Houdini eingeführt werden, entsprechend ist noch kein flächendeckender Support vorhanden. Es handelt sich um eine progressive Erweiterung. Außerdem können bereits heute [Präprozessoren/Linter](https://github.com/stylelint/stylelint/issues/5061) von der Registrierung gebrauch machen.  
+
+* [MDN](
