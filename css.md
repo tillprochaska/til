@@ -65,4 +65,4 @@ Die `@property`-Rule ermöglicht es, Custom Properties zu *registrieren*, d.h. i
 
 Diese `@property`-Regel ist Teil der APIs, die mit CSS Houdini eingeführt werden, entsprechend ist noch kein flächendeckender Support vorhanden. Es handelt sich um eine progressive Erweiterung. Außerdem können bereits heute [Präprozessoren/Linter](https://github.com/stylelint/stylelint/issues/5061) von der Registrierung gebrauch machen.  
 
-* [MDN](
+* [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
