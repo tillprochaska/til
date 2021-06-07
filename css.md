@@ -66,3 +66,25 @@ Die `@property`-Rule ermöglicht es, Custom Properties zu *registrieren*, d.h. i
 Diese `@property`-Regel ist Teil der APIs, die mit CSS Houdini eingeführt werden, entsprechend ist noch kein flächendeckender Support vorhanden. Es handelt sich um eine progressive Erweiterung. Außerdem können bereits heute [Präprozessoren/Linter](https://github.com/stylelint/stylelint/issues/5061) von der Registrierung gebrauch machen.  
 
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
+
+## Masonry-Layouts
+
+Der Editor’s Draft für CSS Grid Level 3 enthält einen Vorschlag, mit dem sich "echte" Masonry-Layouts mit reinem CSS umsetzen lassen (würden). Momentan ist das Feature nur in Firefox (Nightly) implementiert und hinter eine Feature Flag versteckt, weshalb es sich nicht für den produktiven Einsatz eignet.
+
+Eine alternative Implementierung nutzt CSS Columns. Das Ergebnis ist dann allerdings ein "falsches" Masonry-Layout, bei dem die einzelnen Kacheln vertikal (und nicht horizontal) angeordnet werden.
+
+```css
+.masonry {
+  columns: 2;
+  column-gap: 1rem;
+}
+```
+
+Bei dieser Implementierung tritt in Chrome jedoch ein Bug auf, der dazu führt, dass Overflow abgeschnitten wird. Das ist z.B. dann ein Problem, wenn die Kacheln des Masonry-Layouts Schlagschatten haben, die über die Bounding-Box des Containers hinausgehen. Ein random Fix dafür ist es, auf die Kacheln `display: inline-block` anzuwenden.
+
+```css
+.masonry > * {
+  display: inline-block;
+  width: 100%;
+}
+```
