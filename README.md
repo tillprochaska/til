@@ -11,6 +11,7 @@
 * [GitHub](github.md)
 * [HTTP](http.md)
 * [JavaScript](javascript.md)
+* [Laravel](laravel.md)
 * [PHP](php.md)
 * [React](react.md)
 * [Ruby on Rails](ruby-on-rails.md)
