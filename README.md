@@ -13,6 +13,7 @@
 * [JavaScript](javascript.md)
 * [Laravel](laravel.md)
 * [PHP](php.md)
+* [R](r.md)
 * [React](react.md)
 * [Ruby on Rails](ruby-on-rails.md)
 * [Security](security.md)
