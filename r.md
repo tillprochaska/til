@@ -23,3 +23,27 @@ Wie groß muss `k` sein, damit P(Y ≤ k) gleich `q` ist? Die Quantilfunktion is
 ```r
 qbinom(q, size, prob)
 ```
+
+## Normalverteilungen
+
+### Probability Density Funciton (PDF):
+Wie hoch ist die Wahrscheinlichkeitsdichte an der Stelle `x`?
+
+```r
+dnorm(x, mean, sd)
+```
+
+### Cumultative Density Function (CDF):
+Wie hoch ist die Wahrscheinlichkeit, dass die Zufallsvariable den Wert `x` oder kleiner bzw. größer annimmt?
+
+```r
+pnorm(x, mean, sd)
+pnorm(x, mean, sd, lower.tail = FALSE)
+```
+
+### Quantile Function:
+Wie groß muss `x` sein, sodass die Wahrscheinlichkeit P(Y ≤ k) gleich `q` ist?
+
+```r
+qnorm(q, mean, sd)
+```
