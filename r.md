@@ -11,11 +11,11 @@ dbinom(k, size, prob)
 ### Wahrscheinlichkeit für k oder mehr Erfolge P(Y ≥ k):
 
 ```r
-pbinom(k,size, prob)
+pbinom(k,size, prob, lower.tail = FALSE)
 ```
 
 ### Wahrscheinlichkeit von k oder weniger Erfolgen P(Y ≤ k):
 
 ```r
-pbinom(k, size, prob, lower.tail = TRUE)
+pbinom(k, size, prob)
 ```
