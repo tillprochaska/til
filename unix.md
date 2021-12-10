@@ -164,3 +164,7 @@ Die obigen Aufrufe geben `PRODUCTION` zurück.
 ```
 less -N file.text
 ```
+
+## Alle Prozesse eines Programms beenden
+
+Mit `killall [name]` können Prozesse anhand ihres Namens beendet werden. Alternativ gibt `pgrep` alle Prozess-IDs für ein Programm zurück. So können beispielsweise mit `pgrep httpd | xargs kill` alle Apache-Prozesse beendet werden.
