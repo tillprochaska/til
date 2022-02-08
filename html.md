@@ -30,3 +30,4 @@ Untertitel, die keinen eigenen Abschnitt einleiten, dürfen nicht in Tags für �
   
   * [Standard](https://html.spec.whatwg.org/#semantics-2)
   * [Adrian Roselli](https://twitter.com/aardrian/status/1318583839934078979)
+  * [MDN Usage Notes `hgroup`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup#usage_notes)
