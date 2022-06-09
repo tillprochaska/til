@@ -10,6 +10,7 @@
 * [Git](git.md)
 * [GitHub](github.md)
 * [HTTP](http.md)
+* [iTerm 2](iterm.md)
 * [JavaScript](javascript.md)
 * [Laravel](laravel.md)
 * [PHP](php.md)
