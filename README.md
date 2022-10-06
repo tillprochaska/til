@@ -21,6 +21,7 @@
 * [Ruby on Rails](ruby-on-rails.md)
 * [Security](security.md)
 * [Server Administration](server-administration.md)
+* [Sketch](sketch.md)
 * [Slate.js](slate-js.md)
 * [Steuer](steuer-buchhaltung.md)
 * [Sublime Text](sublime-text.md)
