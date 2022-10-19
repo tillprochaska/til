@@ -1,5 +1,24 @@
 # React
 
+## TypeScript & CSS Custom Properties
+
+In order to set custom properties module augmentation or a type assertion can be used. Augmentations are the preferred way, but type assertions work well if a custom property is only used in a single place:
+
+```tsx
+import { CSSProperties } from 'react';
+
+const brandColor = 'pink';
+
+const style: CSSProperties = {
+  ['--accent-color' as string]: brandColor,
+};
+
+return <div style={style}>...</div>
+```
+
+* https://github.com/frenic/csstype#what-should-i-do-when-i-get-type-errors
+* https://github.com/DefinitelyTyped/DefinitelyTyped/blob/2af5cda9fd14a9588946f83e8f6955d8aeabf6c6/types/react/index.d.ts#L1572-L1579
+
 ## Class vs. Pure vs. Functional Components
 
 React bietet verschiedene Möglichkeiten, Komponenten zu erstellen. Der erste Unterschied zwischen *Class Components*, *Pure Components* und *Functional Components* besteht darin, dass die letzten beiden genannten keinen eigenen, internen Zustand haben, also *stateless* sind. Konkret bedeutet das, dass die gerenderte Komponente ausschließlich von den übergebenen *Props* abhängt.
