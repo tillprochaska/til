@@ -24,6 +24,7 @@
 * [Sketch](sketch.md)
 * [Slate.js](slate-js.md)
 * [Steuer](steuer-buchhaltung.md)
+* [Sublime Merge](sublime-merge.md)
 * [Sublime Text](sublime-text.md)
 * [Svelte.js](svelte.md)
 * [SVG](svg.md)
