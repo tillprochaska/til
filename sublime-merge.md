@@ -11,3 +11,11 @@ Sublime Merge’s command palette can be extended with custom commands. Custom c
 	"args": {"argv": ["add", "$text"]},
 }
 ```
+
+## Store SSH key password
+
+Sublime Key uses the default SSH key in `~/.ssh/` for authentication agains remote repositories. Usually it will prompt for the password if the key is protected, but if it doesn’t or in order to persist the password, the following command can be used on macOS:
+
+```
+ssh-add --apple-use-keychain KEY_PATH
+```
